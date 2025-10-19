@@ -1,6 +1,6 @@
 WITH last_paid_visit AS (
     SELECT
-        distinct s.visitor_id,
+        s.visitor_id,
         s.visit_date,
         s.source,
         s.medium,
