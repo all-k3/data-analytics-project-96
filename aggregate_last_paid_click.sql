@@ -47,7 +47,7 @@ SELECT
     lp.utm_source,
     lp.utm_medium,
     lp.utm_campaign,
-    COALESCE(MAX(ca.total_cost), 0) AS total_cost,
+    MAX(ca.total_cost) AS total_cost,
     COUNT(DISTINCT l.lead_id) AS leads_count,
     COUNT(
         CASE
@@ -90,4 +90,4 @@ ORDER BY
     visitors_count DESC,
     utm_source ASC,
     utm_medium ASC,
-    utm_campaign asc;
+    utm_campaign ASC;
